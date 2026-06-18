@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavram Karşıyaka · Kurumsal Gelişim Atlası</title>
+<meta name="description" content="Veli güveni, öğrenci devamlılığı, akademik kanıt ve sürdürülebilir büyüme için hazırlanmış stratejik yol haritası." />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kavram Karşıyaka · Kurumsal Gelişim Atlası" />
+<meta property="og:description" content="Veli güveni, öğrenci devamlılığı, akademik kanıt ve sürdürülebilir büyüme için hazırlanmış stratejik yol haritası." />
+<meta property="og:image" content="https://salmasiali80-design.github.io/kavram-atlasi/og_card.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://salmasiali80-design.github.io/kavram-atlasi/" />
+<meta property="og:site_name" content="Kurumsal Gelişim Atlası" />
+<meta property="og:locale" content="tr_TR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kavram Karşıyaka · Kurumsal Gelişim Atlası" />
+<meta name="twitter:description" content="Veli güveni, öğrenci devamlılığı, akademik kanıt ve sürdürülebilir büyüme için stratejik yol haritası." />
+<meta name="twitter:image" content="https://salmasiali80-design.github.io/kavram-atlasi/og_card.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* —— LOCKED NUVORI TOKENS —— */
+  --obsidian:#0B0807;
+  --obsidian-deep:#070504;
+  --panel:#16130E;
+  --panel-2:#1C1813;
+  --bordeaux:#160F11;
+  --gold:#B89A5E;
+  --gold-hi:#D6A23A;
+  --gold-soft:#E3C176;
+  --champagne:#D7C08A;
+  --ivory:#F4EBDD;
+  --paper:#EFE4D2;
+  --mist:#D0C1AA;
+  --muted:#A99A84;
+  --faint:#7A7068;
+  --line:rgba(214,162,58,.20);
+  --line-soft:rgba(244,235,221,.08);
+  --hair:rgba(184,154,94,.34);
+  --max:1120px;
+  --shadow:0 40px 110px rgba(0,0,0,.55);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --cinzel:"Cinzel",Georgia,serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--obsidian);
+  color:var(--ivory);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.72;
+  font-weight:300;
+  letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+}
+/* faint atmospheric grain + corner glows, brand-world */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(circle at 78% -4%,rgba(214,162,58,.10),transparent 38%),
+    radial-gradient(circle at -6% 64%,rgba(184,154,94,.055),transparent 40%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.022'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:rgba(214,162,58,.26);color:var(--ivory)}
+
+/* ——————————————————————— SHELL ——————————————————————— */
+.wrap{position:relative;z-index:1}
+
+/* progress hairline */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
+  background:linear-gradient(90deg,var(--gold),var(--gold-hi));box-shadow:0 0 14px rgba(214,162,58,.5)}
+
+/* slim top index, appears after cover */
+.index-bar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(20px,5vw,54px);
+  background:rgba(7,5,4,.7);backdrop-filter:blur(22px) saturate(120%);
+  border-bottom:1px solid var(--line-soft);
+  transform:translateY(-110%);transition:transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.index-bar.show{transform:translateY(0)}
+.index-mark{font-family:var(--cinzel);font-size:13px;letter-spacing:.42em;color:var(--gold-soft);font-weight:500}
+.index-mark .sep{color:var(--faint);margin:0 .7em}
+.index-mark .thin{color:var(--mist);letter-spacing:.30em;font-size:11px}
+.index-actions{display:flex;gap:8px}
+.idx-btn{cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--champagne);
+  padding:8px 14px;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:.2s ease}
+.idx-btn:hover{background:rgba(214,162,58,.12);color:var(--ivory);border-color:var(--hair)}
+
+/* ——————————————————————— COVER ——————————————————————— */
+.cover{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;
+  padding:clamp(40px,7vh,80px) clamp(24px,8vw,96px);
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 38%,rgba(28,24,19,.9),transparent 70%),
+    linear-gradient(180deg,var(--obsidian) 0%,var(--obsidian-deep) 100%);
+}
+/* the ceremonial ring — emblem-free, pure geometry, evokes the NV disc without using it */
+.cover::before{
+  content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(58vw,520px);height:min(58vw,520px);border-radius:50%;
+  border:1px solid rgba(214,162,58,.10);
+  box-shadow:0 0 0 1px rgba(214,162,58,.03) inset,
+             0 0 140px rgba(214,162,58,.04);
+}
+.cover-top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
+.cover-kicker{font-family:var(--cinzel);font-size:11px;letter-spacing:.5em;color:var(--gold-soft);font-weight:500}
+.cover-doc{font-family:var(--sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:2}
+
+.cover-center{position:relative;z-index:2;text-align:center;margin:auto 0}
+.cover-ornament{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto 40px}
+.cover-ornament .orn-ln{width:54px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.cover-ornament .orn-ln.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.cover-ornament .orn-dia{width:9px;height:9px;background:linear-gradient(135deg,var(--gold-soft),var(--gold));transform:rotate(45deg);box-shadow:0 0 14px rgba(214,162,58,.35)}
+.cover-place{font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.46em;text-transform:uppercase;color:var(--champagne);margin-bottom:30px}
+.cover-title{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(54px,11vw,138px);line-height:.86;letter-spacing:-.03em;color:var(--ivory);
+}
+.cover-title em{font-style:italic;font-weight:400;color:var(--gold-soft);display:block}
+.cover-diamond{display:flex;align-items:center;justify-content:center;gap:18px;margin:38px 0 34px}
+.cover-diamond .ln{width:clamp(48px,12vw,120px);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.cover-diamond .ln.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.cover-diamond .dia{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.cover-sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.5vw,30px);line-height:1.4;color:var(--paper);max-width:740px;margin:0 auto;font-weight:400}
+
+.cover-foot{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.cover-prep{font-family:var(--sans);font-size:11px;letter-spacing:.16em;color:var(--muted);line-height:1.9;text-transform:uppercase}
+.cover-prep b{color:var(--champagne);font-weight:500}
+.cover-scroll{font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--faint);display:flex;align-items:center;gap:10px}
+.cover-scroll .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ——————————————————————— SECTIONS ——————————————————————— */
+.section{padding:clamp(72px,11vh,128px) clamp(24px,8vw,96px);border-top:1px solid var(--line-soft);position:relative}
+.inner{max-width:var(--max);margin:0 auto}
+.overline{font-family:var(--cinzel);font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;font-weight:500}
+.section-title{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,68px);line-height:1.0;letter-spacing:-.025em;margin-bottom:30px;max-width:18ch}
+.section-title em{font-style:italic;color:var(--gold-soft)}
+.lead{font-family:var(--serif);color:var(--paper);font-size:clamp(20px,2.3vw,30px);line-height:1.42;max-width:880px;font-weight:400}
+.body-copy{color:var(--mist);font-size:17px;font-weight:300;max-width:780px;margin-top:26px;line-height:1.78}
+
+/* opening frame — the two questions */
+.frame-split{margin-top:54px;display:grid;grid-template-columns:1fr 1.35fr;gap:24px}
+.q-box{border:1px solid var(--line);background:linear-gradient(150deg,rgba(28,24,19,.7),rgba(244,235,221,.012));padding:34px 34px;position:relative;overflow:hidden}
+.q-box.now{border-color:var(--hair);background:linear-gradient(150deg,rgba(214,162,58,.10),rgba(28,24,19,.5))}
+.q-box .ql{font-family:var(--cinzel);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:500}
+.q-box.now .ql{color:var(--gold-soft)}
+.q-box p{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.28;color:var(--ivory);font-weight:500}
+.q-box.now p{color:var(--gold-soft)}
+.q-box .num{position:absolute;right:-6px;bottom:-26px;font-family:var(--serif);font-size:120px;color:rgba(214,162,58,.06);line-height:1;font-style:italic}
+
+.micro{margin-top:40px;border-left:1px solid var(--gold);padding:20px 0 20px 28px;color:var(--mist);max-width:920px;font-size:16px;line-height:1.74}
+.micro b{font-family:var(--serif);font-size:19px;color:var(--gold-soft);font-weight:500;font-style:italic}
+
+/* "ne degildir / nedir" ledger */
+.ledger{margin-top:58px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft);border:1px solid var(--line)}
+.led{background:var(--obsidian);padding:34px 34px 32px}
+.led.is{background:linear-gradient(150deg,rgba(214,162,58,.07),rgba(11,8,7,.9))}
+.led .lh{font-family:var(--cinzel);font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;font-weight:500}
+.led.isnt .lh{color:var(--muted)}
+.led.is .lh{color:var(--gold-soft)}
+.led ul{list-style:none;display:grid;gap:13px}
+.led li{position:relative;padding-left:24px;color:var(--mist);font-size:15.5px;line-height:1.5;font-weight:300}
+.led.isnt li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+.led.is li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.led.is li{color:var(--paper);font-size:16px}
+@media(max-width:880px){.ledger{grid-template-columns:1fr}}
+
+/* —— BU ATLASIN DERINLIGI · layered depth —— */
+.depth{margin-top:64px}
+.depth-intro{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.3vw,26px);line-height:1.42;color:var(--paper);max-width:760px;margin-bottom:40px}
+.layers{display:flex;flex-direction:column;gap:14px;position:relative}
+.layer{position:relative;border:1px solid var(--line);padding:26px 30px;overflow:hidden;border-radius:2px;
+  display:flex;align-items:center;gap:24px;transition:.3s cubic-bezier(.2,.7,.2,1)}
+/* glossy reflective sweep across each layer */
+.layer::after{content:"";position:absolute;top:0;left:-60%;width:55%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(244,235,221,.06),transparent);
+  transform:skewX(-18deg);pointer-events:none}
+.layer .lnum{font-family:var(--serif);font-style:italic;font-size:38px;line-height:1;letter-spacing:-.02em;min-width:58px}
+.layer .lbody{flex:1}
+.layer .lt{font-family:var(--cinzel);font-size:12px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:8px;font-weight:500}
+.layer .ld{font-size:15px;line-height:1.55;font-weight:300}
+
+/* layer 01 — lit, this is what they hold */
+.layer.lit{
+  border-color:var(--hair);
+  background:linear-gradient(135deg,rgba(214,162,58,.14),rgba(28,24,19,.6) 60%);
+  box-shadow:0 0 0 1px rgba(214,162,58,.10) inset,0 18px 50px rgba(0,0,0,.4);
+}
+.layer.lit .lnum{color:var(--gold-soft);text-shadow:0 0 24px rgba(214,162,58,.4)}
+.layer.lit .lt{color:var(--gold-soft)}
+.layer.lit .ld{color:var(--paper)}
+.layer.lit::after{left:-60%;animation:sheen 5.5s ease-in-out infinite}
+@keyframes sheen{0%,100%{left:-60%}45%,55%{left:120%}}
+
+/* layers 02 / 03 — receding into darkness, depth implied */
+.layer.dim{background:linear-gradient(135deg,rgba(22,19,14,.5),rgba(11,8,7,.3))}
+.layer.dim .lnum{color:rgba(214,162,58,.30)}
+.layer.dim .lt{color:var(--muted)}
+.layer.dim .ld{color:var(--faint)}
+.layer.d2{opacity:.78}
+.layer.d3{opacity:.52}
+.layer .llock{font-family:var(--sans);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);
+  border:1px solid var(--line-soft);padding:5px 11px;white-space:nowrap}
+.depth-close{margin-top:34px;border-left:1px solid var(--gold);padding:18px 0 18px 26px;
+  color:var(--mist);font-size:16px;line-height:1.7;max-width:820px}
+.depth-close b{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-weight:500}
+@media(max-width:600px){
+  .layer{padding:22px 22px;gap:16px;flex-wrap:wrap}
+  .layer .lnum{font-size:30px;min-width:42px}
+  .layer .llock{order:3;width:100%}
+}
+
+/* three zones */
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.zone{border:1px solid var(--line);background:rgba(22,19,14,.6);padding:34px 30px 30px;display:flex;flex-direction:column;justify-content:space-between;min-height:330px;transition:.25s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden}
+.zone::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:.3s}
+.zone:hover{transform:translateY(-3px);background:rgba(28,24,19,.78);border-color:var(--hair)}
+.zone:hover::before{opacity:1}
+.zone-rn{font-family:var(--cinzel);font-size:13px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px;font-weight:600}
+.zone h3{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.08;color:var(--ivory);margin-bottom:14px;letter-spacing:-.01em}
+.zone p{color:var(--muted);font-size:15px;font-weight:300;line-height:1.6}
+.zone-tags{margin-top:24px;padding-top:18px;border-top:1px solid var(--line-soft);color:var(--champagne);font-size:11px;letter-spacing:.14em;text-transform:uppercase;line-height:2;font-weight:400}
+
+/* ——————————————————————— CHAPTERS ——————————————————————— */
+.chapter{padding:clamp(58px,8vh,92px) clamp(24px,8vw,96px);border-top:1px solid var(--line-soft);scroll-margin-top:70px;position:relative}
+.chapter-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:128px minmax(0,1fr);gap:clamp(28px,5vw,56px)}
+.ch-numwrap{position:sticky;top:96px;height:max-content}
+.ch-num{font-family:var(--serif);font-style:italic;font-size:clamp(64px,9vw,104px);line-height:.78;color:rgba(214,162,58,.34);letter-spacing:-.04em}
+.ch-numline{width:38px;height:1px;background:var(--hair);margin-top:18px}
+.ch-content{max-width:920px}
+.ch-zone{font-family:var(--cinzel);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
+.ch-content h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.4vw,52px);line-height:1.02;letter-spacing:-.025em;margin-bottom:14px;color:var(--ivory)}
+.ch-sub{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,23px);line-height:1.42;color:var(--paper);max-width:780px;margin-bottom:34px;font-weight:400}
+.ch-grid{display:grid;grid-template-columns:1fr .82fr;gap:22px;align-items:start}
+.qcard{border:1px solid var(--line);background:rgba(22,19,14,.5);padding:28px 30px 26px}
+.qcard .cl{font-family:var(--cinzel);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:20px;font-weight:500;display:flex;align-items:center;justify-content:space-between}
+.qcard .cl .of{color:var(--faint);font-family:var(--sans);font-size:9px;letter-spacing:.16em}
+.qlist{list-style:none;display:grid;gap:14px}
+.qlist li{position:relative;padding-left:22px;color:var(--mist);font-size:15.5px;line-height:1.5;font-weight:300}
+.qlist li::before{content:"";position:absolute;left:0;top:.66em;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.qmore{margin-top:22px;padding-top:16px;border-top:1px dashed rgba(184,154,94,.26);
+  color:var(--faint);font-size:12.5px;font-style:italic;font-family:var(--serif);letter-spacing:.02em;
+  display:flex;align-items:center;gap:9px}
+.qmore::before{content:"+";font-style:normal;color:var(--gold);font-size:15px;font-family:var(--sans)}
+.rcard{border:1px solid var(--hair);background:linear-gradient(150deg,rgba(214,162,58,.09),rgba(244,235,221,.015));padding:28px 30px}
+.rcard .cl{font-family:var(--cinzel);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:16px;font-weight:500}
+.rcard p{font-family:var(--serif);color:var(--paper);font-size:18px;line-height:1.5;font-weight:400}
+.rcard strong{color:var(--gold-soft);font-weight:600;font-style:italic}
+
+/* feature chapter — distinct rhythm break (CH12 premium) */
+.chapter.feature{background:linear-gradient(180deg,rgba(22,19,14,.55),rgba(11,8,7,0))}
+.feature .ch-grid{grid-template-columns:1fr;gap:20px}
+.feature .rcard{order:-1;border-color:var(--hair)}
+.prog-rail{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.prog-rail .pchip{border:1px solid var(--line);background:rgba(22,19,14,.5);padding:18px 18px 16px;transition:.22s ease}
+.prog-rail .pchip:hover{border-color:var(--hair);transform:translateY(-2px)}
+.prog-rail .pchip .pt{font-family:var(--cinzel);font-size:11px;letter-spacing:.18em;color:var(--gold-soft);margin-bottom:8px;font-weight:500}
+.prog-rail .pchip .pd{color:var(--muted);font-size:13px;line-height:1.5;font-weight:300}
+@media(max-width:880px){.prog-rail{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.prog-rail{grid-template-columns:1fr}}
+
+/* zone divider banners between the three movements */
+.movement{padding:clamp(40px,6vh,72px) clamp(24px,8vw,96px);border-top:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(22,19,14,.5),transparent);text-align:center}
+.movement .mk{font-family:var(--cinzel);font-size:12px;letter-spacing:.4em;color:var(--gold);font-weight:500;margin-bottom:16px}
+.movement .mt{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3.6vw,42px);color:var(--ivory);font-weight:400;letter-spacing:-.01em}
+.movement .md{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.movement .md .ln{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.movement .md .ln.r{background:linear-gradient(90deg,var(--gold),transparent)}
+.movement .md .dia{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+
+/* ——————————————————————— TIMELINE ——————————————————————— */
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.phase{border:1px solid var(--line);background:rgba(22,19,14,.6);padding:34px 32px;min-height:360px;position:relative;transition:.25s ease}
+.phase:hover{border-color:var(--hair);transform:translateY(-3px)}
+.phase .pn{font-family:var(--cinzel);font-size:13px;letter-spacing:.22em;color:var(--gold);font-weight:600;margin-bottom:6px}
+.phase .pr{font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-bottom:24px}
+.phase h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.08;color:var(--ivory);margin-bottom:14px}
+.phase>p{color:var(--muted);font-size:15px;font-weight:300;margin-bottom:22px;line-height:1.6}
+.phase ul{list-style:none;display:grid;gap:11px}
+.phase li{position:relative;padding-left:18px;color:var(--mist);font-size:14px;font-weight:300;line-height:1.5}
+.phase li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+
+/* ——————————————————————— CTA ——————————————————————— */
+.cta{padding:clamp(80px,13vh,150px) clamp(24px,8vw,96px);text-align:center;position:relative;border-top:1px solid var(--line);
+  background:radial-gradient(ellipse 70% 90% at 50% 0%,rgba(214,162,58,.07),transparent 70%)}
+.cta-inner{max-width:900px;margin:0 auto}
+.cta .overline{color:var(--gold-soft)}
+.cta h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.4vw,72px);line-height:1.0;letter-spacing:-.03em;margin-bottom:28px;color:var(--ivory)}
+.cta h2 em{font-style:italic;color:var(--gold-soft)}
+.cta>.cta-inner>p{font-family:var(--serif);font-size:clamp(19px,2.2vw,25px);line-height:1.52;color:var(--paper);max-width:780px;margin:0 auto;font-weight:400}
+.cta-card{margin:46px auto 0;max-width:720px;border:1px solid var(--line);padding:32px 36px;background:rgba(7,5,4,.5)}
+.cta-card p{font-size:16px;color:var(--mist);font-weight:300;line-height:1.7}
+.cta-card b{font-family:var(--serif);color:var(--gold-soft);font-size:18px;font-weight:600;font-style:italic}
+.cta-sign{margin-top:56px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.cta-sign .sl{width:46px;height:1px;background:var(--hair)}
+.cta-sign .nm{font-family:var(--serif);font-size:24px;color:var(--ivory);font-weight:500;letter-spacing:.01em}
+.cta-sign .rl{font-family:var(--sans);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:400}
+
+/* footer */
+.footer{padding:34px clamp(24px,8vw,96px);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  color:var(--faint);font-size:10px;letter-spacing:.2em;text-transform:uppercase;border-top:1px solid var(--line-soft);font-weight:400}
+
+/* reveal on scroll */
+.rise{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rise.in{opacity:1;transform:none}
+
+/* ——————————————————————— RESPONSIVE ——————————————————————— */
+@media(max-width:880px){
+  .frame-split{grid-template-columns:1fr}
+  .zones{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .chapter-inner{grid-template-columns:1fr;gap:18px}
+  .ch-numwrap{position:relative;top:auto;display:flex;align-items:baseline;gap:16px}
+  .ch-num{font-size:58px}
+  .ch-numline{display:none}
+  .ch-grid{grid-template-columns:1fr}
+  .index-mark .thin{display:none}
+}
+@media(max-width:600px){
+  body{font-size:15px}
+  /* breathing room: raise vertical padding floors */
+  .section{padding:64px 24px}
+  .chapter{padding:54px 24px}
+  .movement{padding:44px 24px}
+  .cta{padding:74px 24px}
+  /* cover: clear the ring, calmer rhythm */
+  .cover{padding:40px 26px 44px}
+  .cover-top{flex-direction:column;gap:12px}
+  .cover::before{width:78vw;height:78vw;opacity:.6}
+  .cover-center{margin:48px 0}
+  .cover-ornament{margin-bottom:30px}
+  .cover-ornament .orn-ln{width:42px}
+  .cover-place{font-size:11px;letter-spacing:.34em;margin-bottom:22px}
+  .cover-title{font-size:clamp(46px,15vw,68px);line-height:.96;letter-spacing:-.02em}
+  .cover-title em{margin-top:.06em}
+  .cover-diamond{margin:30px 0 28px}
+  .cover-sub{font-size:18px;line-height:1.5}
+  .cover-prep{line-height:2.1}
+  /* titles: lower floors + looser wrapped leading + more space below */
+  .section-title{font-size:clamp(28px,8vw,40px);line-height:1.12;margin-bottom:24px}
+  .ch-content h2{font-size:clamp(26px,7.6vw,38px);line-height:1.14;margin-bottom:18px}
+  .ch-sub{font-size:18px;line-height:1.5;margin-bottom:28px}
+  .cta h2{font-size:clamp(30px,8.5vw,44px);line-height:1.12}
+  .lead{font-size:20px;line-height:1.5}
+  .q-box .num{display:none}
+  .q-box p,.qcard,.rcard{font-size:16px}
+  .zone h3,.phase h3{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  .cover-scroll .dot{animation:none}
+}
+
+/* ——————————————————————— PRINT ——————————————————————— */
+@media print{
+  @page{size:A4;margin:14mm}
+  body{background:#fff;color:#1A130A;font-size:11pt}
+  body::before,body::after,.progress,.index-bar,.cover-scroll{display:none!important}
+  .rise{opacity:1!important;transform:none!important}
+  .cover{min-height:auto;background:var(--obsidian);color:var(--ivory);page-break-after:always;padding:40mm 20mm}
+  .cover::before{display:none}
+  .section,.chapter,.movement,.cta{border-color:#cbb88a;page-break-inside:avoid;padding:14mm 0}
+  .chapter-inner{grid-template-columns:60px 1fr}
+  .ch-numwrap{position:relative;top:auto}
+  .ch-num,.section-title,.ch-content h2,.cover-title,.zone h3,.phase h3,.cta h2{color:#5A3D14}
+  .lead,.ch-sub,.rcard p,.cta-inner p{color:#3a2e1c}
+  .body-copy,.qlist li,.zone p,.phase li,.micro{color:#4a3d28}
+  .qcard,.rcard,.zone,.phase,.q-box,.cta-card{background:#fbf6ec;border-color:#d8c08b;break-inside:avoid}
+  .frame-split,.zones,.timeline,.ch-grid{display:block}
+  .qcard,.rcard,.zone,.phase,.q-box{margin:6mm 0}
+  .overline,.ch-zone,.zone-rn,.movement .mk,.cta .overline{color:#7a5520}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+
+<div class="index-bar" id="indexBar">
+  <div class="index-mark">KAVRAM KARŞIYAKA<span class="sep">·</span><span class="thin">KURUMSAL GELİŞİM ATLASI</span></div>
+  <div class="index-actions">
+    <button class="idx-btn" onclick="window.print()">PDF / Yazdır</button>
+    <button class="idx-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Başa Dön</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ——————————— COVER ——————————— -->
+  <header class="cover" id="top">
+    <div class="cover-top">
+      <div class="cover-kicker">ÖZEL · STRATEJİK ÖN İZLEME</div>
+      <div class="cover-doc">Yönetim Masasına Özel<br>Stratejik Değerlendirme</div>
+    </div>
+
+    <div class="cover-center">
+      <div class="cover-ornament"><span class="orn-ln"></span><span class="orn-dia"></span><span class="orn-ln r"></span></div>
+      <div class="cover-place">Kavram Karşıyaka</div>
+      <h1 class="cover-title">Kurumsal Gelişim<em>Atlası</em></h1>
+      <div class="cover-diamond"><span class="ln"></span><span class="dia"></span><span class="ln r"></span></div>
+      <p class="cover-sub">Veli güveni, öğrenci devamlılığı, akademik kanıt ve sürdürülebilir büyüme için hazırlanmış stratejik yol haritası.</p>
+    </div>
+
+    <div class="cover-foot">
+      <div class="cover-prep">Hazırlayan <b>Ali Salmasi</b><br>Kavram Karşıyaka Yönetimi İçin Stratejik Teşhis</div>
+      <div class="cover-scroll"><span class="dot"></span>Aşağı kaydırın</div>
+    </div>
+  </header>
+
+  <!-- ——————————— OPENING FRAME ——————————— -->
+  <section class="section" id="frame">
+    <div class="inner">
+      <div class="overline rise">Açılış Çerçevesi</div>
+      <h2 class="section-title rise">Bu bir kayıp raporu değil. Var olan değeri <em>görünür</em> kılma haritası.</h2>
+      <p class="lead rise">Kavram Karşıyaka’nın elinde zaten güçlü değerler var: emek veren öğretmenler, kuruma bağlı öğrenciler, yerel bilinirlik ve yıllara dayanan akademik tecrübe. Asıl stratejik soru şudur: Bu değerler; velinin gördüğü, yönetimin ölçebildiği ve ekibin düzenli takip edebildiği tek bir sisteme bağlanıyor mu?</p>
+      <p class="body-copy rise">Bu atlasın amacı geçmiş emeği yargılamak değildir. Amaç, mevcut emeğin kurumsal zekâya dönüştüğü yolu açmaktır: ders kanıta, kanıt güvene, güven yenilemeye, yenileme de sürdürülebilir büyümeye dönüşsün. Atlas bütün cevapları vermez; doğru soruların haritasını çıkarır.</p>
+
+      <div class="frame-split rise">
+        <div class="q-box">
+          <div class="ql">Eski Soru</div>
+          <p>“Dersler iyi mi?”</p>
+          <span class="num">?</span>
+        </div>
+        <div class="q-box now">
+          <div class="ql">Stratejik Soru</div>
+          <p>İyi ders; görünür kanıta, veli güvenine, kayıt yenilemeye, tavsiyeye ve yeni kayıt hareketine dönüşüyor mu?</p>
+          <span class="num">!</span>
+        </div>
+      </div>
+
+      <div class="micro rise"><p><b>Mikro-kanıt ilkesi.</b> Bir veli, çocuğunda ilerleme olup olmadığını anlamak için dönem sonunu beklememeli. Kısa bir teşhis kartı, haftalık bir risk sinyali, öğretmenden gelen üç satırlık bir gözlem notu ya da küçük bir ilerleme mesajı — görünmeyen emeği görünür güvene dönüştürür. Atlas boyunca tekrar eden tez budur: <b>tahminden kanıta.</b></p></div>
+      <div class="ledger rise">
+        <div class="led isnt">
+          <div class="lh">Bu Atlas Ne Değildir</div>
+          <ul>
+            <li>Bir eleştiri ya da kusur raporu değildir.</li>
+            <li>Hazır, uygulanmayı bekleyen bir operasyon dosyası değildir.</li>
+            <li>Her şeyi aynı anda değiştirme telaşı taşımaz; doğru sırayla ilerler.</li>
+          </ul>
+        </div>
+        <div class="led is">
+          <div class="lh">Bu Atlas Nedir</div>
+          <ul>
+            <li>Kurumun bugün karşılaştığı soruların haritasını çıkaran stratejik bir bakıştır.</li>
+            <li>En hızlı güven üretebilecek ilk kurumsal sinyali belirlemeye odaklanır.</li>
+            <li>Mevcut emeği görünür, ölçülebilir ve takip edilebilir bir sisteme bağlar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— BU ATLASIN DERINLIGI ——————————— -->
+  <section class="section" id="depth">
+    <div class="inner">
+      <div class="overline rise">Bu Atlasın Derinliği</div>
+      <h2 class="section-title rise">Bu atlas, teşhis dosyasının <em>kendisi</em> değil. Masaya açılan ilk katmanı.</h2>
+      <p class="depth-intro rise">Gördüğünüz her başlık, daha derin bir teşhis katmanının yüzeyidir. Atlasın işi her cevabı tek seferde vermek değil; doğru konuşmayı başlatmaktır.</p>
+
+      <div class="layers">
+        <div class="layer lit rise">
+          <div class="lnum">01</div>
+          <div class="lbody">
+            <div class="lt">Stratejik Atlas · Elinizdeki Katman</div>
+            <div class="ld">On dört başlık, üç etki alanı ve doğru soruların haritası. Kurumun nereden başlaması gerektiğini gösteren stratejik yüzey.</div>
+          </div>
+        </div>
+
+        <div class="layer dim d2 rise">
+          <div class="lnum">02</div>
+          <div class="lbody">
+            <div class="lt">Teşhis Katmanı · Oturumda Açılır</div>
+            <div class="ld">Her başlığın altındaki ayrıntılı teşhis soruları, saha gözlem başlıkları, öğrenci kopuş sinyalleri ve veli güven temasları.</div>
+          </div>
+          <div class="llock">Masada Açılır</div>
+        </div>
+
+        <div class="layer dim d3 rise">
+          <div class="lnum">03</div>
+          <div class="lbody">
+            <div class="lt">Uygulama Katmanı · Birlikte Kurulur</div>
+            <div class="ld">Öğretmen içgörü akışları, kanıt formatları ve uygulanabilir protokol taslakları — kurumun ritmine göre tasarlanır.</div>
+          </div>
+          <div class="llock">Masada Açılır</div>
+        </div>
+      </div>
+
+      <div class="depth-close rise">İlk oturumda yalnızca bir başlık açılır. O başlığın altında görünen belirti, muhtemel neden, kanıt ihtiyacı ve ilk uygulanabilir hamle birlikte değerlendirilir. <b>Önemli olan her şeyi görmek değil; doğru yerden başlamaktır.</b></div>
+    </div>
+  </section>
+
+  <!-- ——————————— THREE ZONES ——————————— -->
+  <section class="section" id="zones">
+    <div class="inner">
+      <div class="overline rise">Üç Etki Alanı</div>
+      <h2 class="section-title rise">On dört başlık. Üç hareket. <em>Tek</em> bir kurumsal ritim.</h2>
+      <p class="lead rise">Bu atlas on dört maddelik bir yapılacaklar listesi değildir; kurumun önceliklerini okumaya yarayan bir teşhis haritasıdır. Kurumun her şeyi aynı anda değiştirmesi gerekmez — önce en hızlı görünür güveni üretecek tek sinyali seçmesi gerekir.</p>
+      <div class="zones">
+        <div class="zone rise">
+          <div>
+            <div class="zone-rn">ALAN I</div>
+            <h3>Güven ve Devamlılık</h3>
+            <p>Öğrenci ve veli yolculuğu: güven nerede yükseliyor, nerede zayıflıyor, nerede sadakate dönüşüyor?</p>
+          </div>
+          <div class="zone-tags">Mevcut Sinyal · Devamlılık · Veli Güveni · Rehberlik · Aidiyet</div>
+        </div>
+        <div class="zone rise">
+          <div>
+            <div class="zone-rn">ALAN II</div>
+            <h3>Akademik Zekâ</h3>
+            <p>İç sistem: sınıf kalitesi, öğretmen tecrübesi ve veri nasıl düzenli bir gelişim döngüsüne dönüşür?</p>
+          </div>
+          <div class="zone-tags">Akademik Kanıt · Öğretmen Zekâsı · Ar-Ge · TTC</div>
+        </div>
+        <div class="zone rise">
+          <div>
+            <div class="zone-rn">ALAN III</div>
+            <h3>Büyüme ve Uygulama</h3>
+            <p>Kurumun dış yüzü ve yönetim katmanı: kayıt, görünürlük, premium programlar, ekip uyumu ve liderlik takibi.</p>
+          </div>
+          <div class="zone-tags">Kayıt · Görünürlük · Premium Büyüme · Kurumsal Dil · Liderlik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— MOVEMENT I ——————————— -->
+  <div class="movement">
+    <div class="mk rise">ALAN I</div>
+    <div class="mt rise">Güven ve Devamlılık</div>
+    <div class="md rise"><span class="ln"></span><span class="dia"></span><span class="ln r"></span></div>
+  </div>
+
+  <!-- CH 01 -->
+  <section class="chapter" id="c01">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">01</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan I · Güven & Devamlılık</div>
+        <h2>Mevcut Durum Sinyalleri</h2>
+        <p class="ch-sub">İlk iş tahmin etmek değil; kurumun verdiği gerçek sinyalleri doğru okumaktır.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Üretilen değer tam olarak nerede görünmez kalıyor?</li>
+              <li>Veli güveni hangi temas anında, neden zayıflıyor?</li>
+              <li>Hangi kararlar veriye, hangileri yalnızca o günün baskısına göre alınıyor?</li>
+            </ul>
+            <div class="qmore">Tam sinyal haritası — akademik, duygusal ve operasyonel katmanlar — oturumda açılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Gerileme çoğu zaman tek bir büyük hatayla başlamaz. Emek <strong>görünür güvene</strong> dönüşmediğinde, sessizce başlar. Liderliğin ilk hamlesi; yüzeydeki belirtileri alttaki kurumsal sinyalden ayırmaktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 02 -->
+  <section class="chapter" id="c02">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">02</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan I · Güven & Devamlılık</div>
+        <h2>Öğrenci Devamlılığı ve Güven Sinyalleri</h2>
+        <p class="ch-sub">Devamlılık yalnızca yoklama değildir; öğrencinin kuruma bağlılığını gösteren akademik ve duygusal nabızdır.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Hangi öğrenciler sınıfta var ama zihnen çoktan uzaklaşmış durumda?</li>
+              <li>Bir öğrenci ayrılmadan haftalar önce hangi küçük sinyalleri verir — ve bunları kim okur?</li>
+              <li>Yıl içinde heyecan ve katılım tam olarak nerede düşüyor?</li>
+              <li>Erken uyarı, takip ve geri kazanım sürecinin sahibi kim?</li>
+            </ul>
+            <div class="qmore">Sessiz kopuşun erken işaretleri ve geri kazanım protokolü oturumda açılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Burada mesele “kayıp” değil, <strong>güven sinyalidir</strong>. Öğrenciler bir anda kopmaz; önce sessizlik, devamsızlık, düşük katılım ve ödev ritminde bozulma gibi küçük işaretler gönderir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 03 -->
+  <section class="chapter" id="c03">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">03</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan I · Güven & Devamlılık</div>
+        <h2>Veli Güven Mimarisi</h2>
+        <p class="ch-sub">Veli yalnızca dersin anlatılmasını değil; çocuğunun görüldüğünü, takip edildiğini ve doğru yönlendirildiğini hissetmek ister.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Veliyle yalnızca bir sorun çıktığında mı iletişim kuruluyor?</li>
+              <li>İlerleme, risk ve sonraki adım belli bir ritimle mi anlatılıyor?</li>
+              <li>Veli görüşmeleri rahatlama mı yaratıyor, sessiz bir kaygı mı bırakıyor?</li>
+              <li>Veli şüpheye düşmeden önce somut kanıt görebiliyor mu?</li>
+            </ul>
+            <div class="qmore">Veli iletişim ritmi, dili ve kanıt akışı oturumda açılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Veli iletişimi rastgele bir telefon trafiğine dönüşmemeli. Kurumun dili; <strong>zamanında, sakin, somut ve kanıta dayalı</strong> ilerleyen bir güven mimarisi kurmalıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 04 -->
+  <section class="chapter" id="c04">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">04</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan I · Güven & Devamlılık</div>
+        <h2>Rehberlik Takip Sistemi</h2>
+        <p class="ch-sub">Rehberlik iyi niyetle değil, iyi kurulmuş bir takip zinciriyle güçlenir.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Öğrenciler risk düzeyine göre sınıflandırılıyor mu?</li>
+              <li>Veli görüşmeleri ve öğretmen gözlemleri kayda geçiyor mu?</li>
+              <li>Veli iş birliği yapmadığında devreye giren bir protokol var mı?</li>
+              <li>Yönetim, rehberlikten net ve ölçülebilir rapor alıyor mu?</li>
+            </ul>
+            <div class="qmore">Tam eskalasyon zinciri ve kayıt formatı oturumda paylaşılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Rehberlik bir “arama birimi” değil, bir <strong>akademik risk yönetim sistemi</strong> olmalı. Amaç, sorunları görünür hasara dönüşmeden önce yakalamaktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 05 -->
+  <section class="chapter" id="c05">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">05</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan I · Güven & Devamlılık</div>
+        <h2>Aidiyet Sistemi</h2>
+        <p class="ch-sub">Öğrenci bir öğretmeni sevebilir; ama bu, kuruma bağlı hissettiği anlamına gelmez.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Öğrenci “Kavram beni tanıyor” diye hissediyor mu?</li>
+              <li>Gelişim anları fark ediliyor ve kutlanıyor mu?</li>
+              <li>Teneffüsler öğrenciyi kuruma bağlayan canlı anlara mı dönüşüyor, yoksa boş mu geçiyor?</li>
+              <li>Öğrenci “gidiyorum” mu diyor, “burası benim yerim” mi?</li>
+            </ul>
+            <div class="qmore">Aidiyet ritüelleri ve tasarımı oturumda derinleşir.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Hedef, devamı <strong>bağlılığa</strong> çevirmek. Öğrenci, “bu yer beni tanıyor, takip ediyor ve başarmamı istiyor” dediğinde sadakat başlar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— MOVEMENT II ——————————— -->
+  <div class="movement">
+    <div class="mk rise">ALAN II</div>
+    <div class="mt rise">Akademik Zekâ</div>
+    <div class="md rise"><span class="ln"></span><span class="dia"></span><span class="ln r"></span></div>
+  </div>
+
+  <!-- CH 06 -->
+  <section class="chapter" id="c06">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">06</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan II · Akademik Zekâ</div>
+        <h2>Akademik Kanıt Sistemi</h2>
+        <p class="ch-sub">İyi öğretmek yeterli değildir; veli onun etkisini göremiyorsa, güven yavaşça erir.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Her ay veliye hangi somut kanıt ulaşıyor?</li>
+              <li>Veli ilerlemeyi net biçimde görebiliyor mu?</li>
+              <li>Akademik sorunlar veriyle mi anlatılıyor, genel sözlerle mi?</li>
+              <li>İlerleme, veli sormadan önce paylaşılıyor mu?</li>
+            </ul>
+            <div class="qmore">Aylık kanıt kartının formatı ve veli raporlama akışı oturumda gösterilir.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Kurum “iyi öğretiyoruz” demekten, <strong>“işte değişimin görünür kanıtı”</strong> demeye geçmeli. Tahminden kanıta giden hat tam da burada kurulur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 07 -->
+  <section class="chapter" id="c07">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">07</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan II · Akademik Zekâ</div>
+        <h2>Öğretmen İçgörüsü Akışı</h2>
+        <p class="ch-sub">Öğretmenler, yönetimin her zaman göremediği birçok şeyi sınıfta görür. Soru şu: Bu içgörü sınıfta mı kalıyor, kuruma mı akıyor?</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Öğretmenlerin fark ettiği neler yönetime hiç ulaşmıyor?</li>
+              <li>Zayıflayan öğrenciler erkenden, somut biçimde raporlanıyor mu?</li>
+              <li>Gözlemler belirli ve eyleme dönüşür mü, yoksa muğlak mı kalıyor?</li>
+              <li>Öğretmen içgörüsü rehberlik ve veli iletişimine bağlanıyor mu?</li>
+            </ul>
+            <div class="qmore">Standart gözlem formatı ve içgörü-karar akışı oturumda paylaşılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Akademik zekâ; sınıfta görülen verinin <strong>rehberliğe, veli iletişimine ve yönetim kararına dönüşmesidir</strong>. Hedef, öğretmen tecrübesini ortak bir kurumsal beyne çevirmek — zekâyı görünür, kullanılabilir ve koordine kılmaktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 08 -->
+  <section class="chapter" id="c08">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">08</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan II · Akademik Zekâ</div>
+        <h2>Akademik Ar-Ge ve Öğretmen Mükemmeliyeti Birimi</h2>
+        <p class="ch-sub">Güçlü kurum kararları rastgele almaz. Gözlemleyen, araştıran, analiz eden, eğiten ve denetleyen bir beyne ihtiyaç duyar.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Sınıflarda gerçekte ne olduğunu kim inceliyor?</li>
+              <li>Tekrar eden zayıflıkları sınıflar arasında kim görüyor?</li>
+              <li>Öğretmen gözlemini kurumsal karara kim çeviriyor?</li>
+              <li>Alınan kararların sonuç üretip üretmediğini kim ölçüyor?</li>
+            </ul>
+            <div class="qmore">Birimin yetki ve sorumluluk haritası oturumda açılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Bir okul yalnızca iyi insanlar çok çalıştığı için büyümez; <strong>iyi insanlar güçlü bir sistemin içinde çalıştığında</strong> büyür. Bu birim, o sistemin beyni ve motorudur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 09 -->
+  <section class="chapter" id="c09">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">09</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan II · Akademik Zekâ</div>
+        <h2>TTC · Öğretmen Gelişim Merkezi</h2>
+        <p class="ch-sub">Güçlü kurum yalnızca öğretmen işe almaz; onları eğitir, hizalar, destekler ve yeniler.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Öğretmenler işe alındıktan sonra eğitiliyor mu?</li>
+              <li>Ortak bir “Kavram öğretim dili” var mı?</li>
+              <li>Yeni öğretmenler doğru biçimde uyumlanıyor mu?</li>
+              <li>Gelişim sürekli mi, yoksa tesadüfi mi?</li>
+            </ul>
+            <div class="qmore">Eğitim başlıkları ve mentorluk yapısı oturumda derinleşir.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Amaç öğretmeni mekanik biçimde denetlemek değil; <strong>güçlendirirken kurumsal standartla hizalamaktır</strong>. Sürekli öğretmen gelişimi, kurum kalitesinin sigortasıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— MOVEMENT III ——————————— -->
+  <div class="movement">
+    <div class="mk rise">ALAN III</div>
+    <div class="mt rise">Büyüme ve Uygulama</div>
+    <div class="md rise"><span class="ln"></span><span class="dia"></span><span class="ln r"></span></div>
+  </div>
+
+  <!-- CH 10 -->
+  <section class="chapter" id="c10">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">10</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan III · Büyüme & Uygulama</div>
+        <h2>Kayıt Yolculuğu Onarımı</h2>
+        <p class="ch-sub">Kayıt; şansa, ânın havasına ya da doğaçlamaya bırakılmamalı.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Veliyle ilk konuşan kim, ne söylüyor?</li>
+              <li>İlk temasta tanılayıcı bir görüşme yapılıyor mu?</li>
+              <li>Kararsız veliler takip ediliyor mu?</li>
+              <li>Kaybedilen kayıtlar sonradan analiz ediliyor mu?</li>
+            </ul>
+            <div class="qmore">Huninin tüm aşamaları oturumda haritalanır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Hedef, “bir veli geldi, belki kaydoldu”dan <strong>“her veli özenle tasarlanmış bir güven yolculuğuna giriyor”</strong>a geçmek. İlk temas, kurumun en pahalı ânıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 11 -->
+  <section class="chapter" id="c11">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">11</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan III · Büyüme & Uygulama</div>
+        <h2>Yerel Otorite ve Görünürlük</h2>
+        <p class="ch-sub">Görünürlük yalnızca hareket göstermek için değil, akademik otorite inşa etmek için kullanılmalıdır.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Kamuya açık iletişim akademik ciddiyeti gösteriyor mu?</li>
+              <li>Paylaşımlar güven mi kuruyor, yalnızca etkinlik mi gösteriyor?</li>
+              <li>Okul ziyaretleri, sosyal medya ve veli mesajları aynı dili taşıyor mu?</li>
+              <li>Kavram yerelde akademik bir referans noktası olarak algılanıyor mu?</li>
+            </ul>
+            <div class="qmore">İçerik mimarisi ve otorite sinyalleri oturumda açılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Kurumun dış sesi şu duyguyu vermeli: <strong>öğrenciyi anlıyoruz, gelişimi ölçüyoruz, aileyi yönlendiriyoruz</strong>. Amaç yalnızca görünmek değil, veli kapıdan girmeden önce saygı kazanmaktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 12 -->
+  <section class="chapter feature" id="c12">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">12</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan III · Büyüme & Uygulama</div>
+        <h2>Premium Büyüme Fırsatları</h2>
+        <p class="ch-sub">Yüksek statülü programlar yalnızca ek gelir yaratmaz; kurumun yereldeki algısını ve akademik otoritesini yukarı taşır.</p>
+        <div class="ch-grid">
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Premium büyüme rastgele kurs eklemek değildir. Sınav hazırlığı; <strong>net vaadi, ölçülebilir sonucu ve görünür kanıtı</strong> olan bir alandır — doğru kurgulandığında hem gelir hem itibar üretir. Bu, kurumun okul içi destekle yetinmeyip, yerelde sınav otoritesi konumuna yükseldiği eşiktir.</p>
+          </div>
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Kavram’ın yerel potansiyeline hangi premium programlar yakışır?</li>
+              <li>VIP İngilizce, IELTS, TOEFL ya da YDS/YDT kuruma statü kazandırır mı?</li>
+              <li>Kurum yalnızca okul öğrencisine mi, yetişkin ve mezun kitleye de mi hitap edebilir?</li>
+              <li>Hangi programlar hem gelir hem kalıcı itibar üretir?</li>
+            </ul>
+            <div class="qmore">Sınav zekâsına dayalı program mimarisi ve konumlandırma oturumda açılır.</div>
+          </div>
+        </div>
+        <div class="prog-rail rise">
+          <div class="pchip"><div class="pt">IELTS / TOEFL</div><div class="pd">Yurt dışı ve akademik hedefli kitle için yüksek statülü hat.</div></div>
+          <div class="pchip"><div class="pt">YDS / YDT</div><div class="pd">Üniversite ve kariyer sınavlarında ölçülebilir sonuç vaadi.</div></div>
+          <div class="pchip"><div class="pt">VIP · Birebir</div><div class="pd">Sınırlı kontenjanlı, premium fiyatlı, sonuç odaklı program.</div></div>
+          <div class="pchip"><div class="pt">Yetişkin / Mezun</div><div class="pd">Okul dışı yeni gelir havuzu ve marka genişlemesi.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 13 -->
+  <section class="chapter" id="c13">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">13</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan III · Büyüme & Uygulama</div>
+        <h2>Ekip Uyumu ve Kurumsal Dil</h2>
+        <p class="ch-sub">Güçlü kurum tek bir dili konuşur; ama insanları tek tipe sokmaz.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Ön büro, öğretmen, rehberlik ve yönetim Kavram’ı tutarlı anlatıyor mu?</li>
+              <li>Hangi kelimeler güven kuruyor, hangileri kafa karıştırıyor?</li>
+              <li>Ekip hassas anlarda ne söyleyeceğini biliyor mu?</li>
+              <li>Kurum kimliği günlük iletişimde hissediliyor mu?</li>
+            </ul>
+            <div class="qmore">Ortak iletişim kılavuzu oturumda paylaşılır.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Kurumsal dil insanları tek tipe sokmak için değil, ekibi <strong>belirsizlikten kurtarmak</strong> içindir. Herkes kişiliğini korur; kurum ise ortak bir ses ve yön kazanır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CH 14 -->
+  <section class="chapter" id="c14">
+    <div class="chapter-inner">
+      <div class="ch-numwrap rise"><div class="ch-num">14</div><div class="ch-numline"></div></div>
+      <div class="ch-content rise">
+        <div class="ch-zone">Alan III · Büyüme & Uygulama</div>
+        <h2>Liderlik ve Karar Sistemi</h2>
+        <p class="ch-sub">Fikirler ancak sahibi, takibi ve ritmi varsa kurumsal değere dönüşür.</p>
+        <div class="ch-grid">
+          <div class="qcard">
+            <div class="cl">Ön Teşhis Soruları</div>
+            <ul class="qlist">
+              <li>Her gelişim başlığının sahibi kim?</li>
+              <li>Kararlar ne sıklıkla gözden geçiriliyor?</li>
+              <li>Hangi kararlar yalnızca konuşma olarak kalıyor?</li>
+              <li>Yönetim, iyi fikirlerin sönmesini nasıl engelliyor?</li>
+            </ul>
+            <div class="qmore">Karar ve hesap verebilirlik ritmi oturumda kurulur.</div>
+          </div>
+          <div class="rcard">
+            <div class="cl">Stratejik Okuma</div>
+            <p>Sürdürülebilir büyüme bir ritim ister: <strong>gözle, karar ver, uygula, denetle, düzelt, tekrar et</strong>. Sahiplik yoksa güçlü fikirler bile yalnızca güzel niyet olarak kalır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— TIMELINE ——————————— -->
+  <section class="section" id="timeline">
+    <div class="inner">
+      <div class="overline rise">Uygulama Ritmi</div>
+      <h2 class="section-title rise">Başlamak için küçük. <em>Etki</em> için ciddi.</h2>
+      <p class="lead rise">Atlas, kurumdan bir gecede her şeyi değiştirmesini istemez. Bir görünür sinyal, kontrollü bir pilot ve ölçülebilir bir gelişim döngüsüyle başlar.</p>
+      <div class="micro rise"><p>Bu çalışma kuruma ek yük bindirmek için değil; <b>mevcut emeği daha görünür ve daha takip edilebilir hâle getirmek</b> için tasarlanmıştır.</p></div>
+      <div class="timeline">
+        <div class="phase rise">
+          <div class="pn">30 GÜN</div>
+          <div class="pr">Nabız & Hızlı Kazanım</div>
+          <h3>İlk Görünür Rahatlama</h3>
+          <p>En acil güven sinyallerini okuyup ekibi boğmadan görünür rahatlama üretmek.</p>
+          <ul>
+            <li>Öncelikli öğrenci gruplarını belirleme</li>
+            <li>Veli iletişim ritmini sadeleştirme</li>
+            <li>Öğretmen risk gözlemlerini toplama</li>
+            <li>Bir akademik kanıt kartı prototipi</li>
+          </ul>
+        </div>
+        <div class="phase rise">
+          <div class="pn">90 GÜN</div>
+          <div class="pr">Sistem Pilotu</div>
+          <h3>Kurumsal Alışkanlık</h3>
+          <p>İlk iyileştirmeleri tekrar edilebilir kurumsal alışkanlıklara dönüştürmek.</p>
+          <ul>
+            <li>Akademik Kanıt Sistemi pilotu</li>
+            <li>Rehberlik üst takip protokolü</li>
+            <li>TTC pilot oturumu</li>
+            <li>Ar-Ge değerlendirme ritmi</li>
+          </ul>
+        </div>
+        <div class="phase rise">
+          <div class="pn">12 AY</div>
+          <div class="pr">Büyüme Mimarisi</div>
+          <h3>Sürdürülebilir Güç</h3>
+          <p>İşe yarayan uygulamaları kurumsal kimliğe ve yerel akademik otoriteye dönüştürmek.</p>
+          <ul>
+            <li>Premium programları genişletme</li>
+            <li>Kurumsal dili standartlaştırma</li>
+            <li>Yerel akademik görünürlüğü güçlendirme</li>
+            <li>Yıllık gelişim döngüsü kurma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——————————— CTA ——————————— -->
+  <section class="cta" id="next">
+    <div class="cta-inner">
+      <div class="overline rise">Buradan Sonrası</div>
+      <h2 class="rise">Bu sorular artık masada. <em>Sıradaki adım</em>, onlara birlikte bakmak.</h2>
+      <p class="rise">Bu atlas, dağınık görünen bir tabloyu tek bir kurumsal mantığa bağlar: ders kanıta, kanıt güvene, güven sürdürülebilir büyümeye. İlk oturumda yalnızca bir başlığı ele alırız: bir öğrenci grubu, bir veli güven sinyali ya da bir akademik kanıt prototipi. Oradan, kurumun kısa sürede görebileceği ilk somut farkı tasarlarız.</p>
+      <div class="cta-card rise">
+        <p><b>Başlangıç noktası:</b> odaklı bir Kurumsal Nabız Yoklaması — bir öğrenci grubu, bir veli güven sinyali, bir akademik kanıt prototipi ve uygulanabilir tek bir sonraki adım. Büyük bir karar değil; doğru başlangıç.</p>
+      </div>
+      <div class="cta-sign rise">
+        <span class="sl"></span>
+        <span class="nm">Ali Salmasi</span>
+        <span class="rl">Stratejik Teşhis · Kurumsal Gelişim Atlası</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>Kavram Karşıyaka · Kurumsal Gelişim Atlası</div>
+    <div>Özel Stratejik Ön İzleme · Yönetim Müzakeresi İçindir</div>
+  </footer>
+
+</div>
+
+<script>
+// progress bar
+const prog=document.getElementById('prog');
+const bar=document.getElementById('indexBar');
+const cover=document.getElementById('top');
+function onScroll(){
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.width=(window.scrollY/h*100)+'%';
+  bar.classList.toggle('show',window.scrollY>window.innerHeight*0.72);
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
